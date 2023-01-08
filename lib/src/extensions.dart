@@ -239,9 +239,9 @@ extension PersianDateTimeExtensions on DateTime {
                 useAfghaniMonthName: useAfghaniMonthName) +
             monthString
         : splitedStr[1];
-    outputString += seprator;
 
     if(showYear){
+      outputString += seprator;
       outputString += strYear ? splitedStr[0].toWord() : splitedStr[0];
     }
     
