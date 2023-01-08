@@ -218,6 +218,7 @@ extension PersianDateTimeExtensions on DateTime {
     bool showDayStr = false,
     String seprator = " ",
     String monthString = " ",
+    bool showYear = true,
 
     ///نام ماه های افغانی مثل: حمل، ثور ....
     bool useAfghaniMonthName = false,
@@ -240,7 +241,10 @@ extension PersianDateTimeExtensions on DateTime {
         : splitedStr[1];
     outputString += seprator;
 
-    outputString += strYear ? splitedStr[0].toWord() : splitedStr[0];
+    if(showYear){
+      outputString += strYear ? splitedStr[0].toWord() : splitedStr[0];
+    }
+    
 
     return outputString;
   }
